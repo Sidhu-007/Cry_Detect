@@ -3,7 +3,7 @@
 Welcome to the CryDetect Dashboard, an advanced monitoring and alert management system for real-time camera feeds and incident reporting.
 
 ## 🌐 Live Demo
-You can access the live dashboard here: **[CryDetect Live Dashboard](https://cry-detect.vercel.app/dashboard)**
+You can access the live dashboard here: **[CryDetect Live Dashboard](https://cry-detect.vercel.app)**
 
 ---
 
