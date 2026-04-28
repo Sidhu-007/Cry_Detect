@@ -1,0 +1,299 @@
+/* ===========================
+   Responder Dashboard Styles
+   =========================== */
+
+.rd-layout {
+  background: #f1f5f9;
+}
+
+/* Theme accents per responder type */
+.theme-fire .rd-role-icon   { background: #fef2f2; color: #dc2626; border-color: #fecaca; }
+.theme-medical .rd-role-icon { background: #f0fdf4; color: #16a34a; border-color: #bbf7d0; }
+.theme-security .rd-role-icon { background: #eff6ff; color: #2563eb; border-color: #bfdbfe; }
+.theme-admin .rd-role-icon   { background: #fdf4ff; color: #9333ea; border-color: #e9d5ff; }
+
+/* Main layout */
+.rd-main {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Role Header */
+.rd-role-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: white;
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+.rd-role-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  border: 1.5px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rd-role-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 4px;
+}
+
+.rd-role-subtitle {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.rd-critical-badge {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  animation: pulse-badge 2s infinite;
+}
+
+@keyframes pulse-badge {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(220,38,38,0.3); }
+  50% { box-shadow: 0 0 0 6px rgba(220,38,38,0); }
+}
+
+/* Cards Grid */
+.rd-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+/* Alert Card */
+.rd-alert-card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  border-left: 4px solid transparent;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.rd-alert-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.rd-alert-card.severity-critical { border-left-color: #dc2626; }
+.rd-alert-card.severity-warning  { border-left-color: #f59e0b; }
+.rd-alert-card.rd-resolved       { opacity: 0.5; border-left-color: #6b7280; }
+
+.rd-alert-card.rd-recent {
+  animation: slide-in 0.4s ease-out;
+}
+
+@keyframes slide-in {
+  from { opacity: 0; transform: translateY(-12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Alert card header row */
+.rd-alert-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+/* Type badge */
+.rd-type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.rd-type-badge.type-fire     { background: #fef2f2; color: #dc2626; }
+.rd-type-badge.type-medical  { background: #f0fdf4; color: #16a34a; }
+.rd-type-badge.type-security { background: #eff6ff; color: #2563eb; }
+
+.rd-new-tag {
+  margin-left: auto;
+  font-size: 10px;
+  font-weight: 800;
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  padding: 2px 8px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  animation: blink-new 1.5s infinite alternate;
+}
+
+@keyframes blink-new {
+  from { opacity: 1; }
+  to   { opacity: 0.5; }
+}
+
+.rd-resolved-tag {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.rd-alert-body { margin-bottom: 16px; }
+
+.rd-alert-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 6px;
+}
+
+.rd-alert-location {
+  font-size: 13px;
+  color: #4b5563;
+  margin: 0 0 4px;
+}
+
+.rd-alert-time {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* Card action buttons */
+.rd-alert-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.rd-btn-respond,
+.rd-btn-resolve {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.15s;
+}
+
+.rd-btn-respond {
+  background: #1d4ed8;
+  color: white;
+}
+
+.rd-btn-respond:hover { background: #1e40af; }
+
+.rd-btn-resolve {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.rd-btn-resolve:hover { background: #dcfce7; color: #16a34a; }
+
+/* Empty state */
+.rd-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #9ca3af;
+}
+
+.rd-empty-icon { margin-bottom: 12px; color: #d1d5db; }
+
+.rd-empty h3 { font-size: 18px; color: #374151; margin: 0 0 8px; }
+.rd-empty p  { font-size: 14px; }
+
+/* ========================
+   Camera / Active View
+   ======================== */
+.rd-camera-view { display: flex; flex-direction: column; gap: 0; }
+
+.rd-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4b5563;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 0;
+  margin-bottom: 16px;
+  transition: color 0.15s;
+}
+
+.rd-back-btn:hover { color: #111827; }
+
+.rd-active-alert-card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px 24px;
+  border-left: 4px solid #dc2626;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  margin-bottom: 20px;
+}
+
+.rd-active-alert-card.severity-warning { border-left-color: #f59e0b; }
+
+.rd-dispatch-text {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 6px 0 0;
+}
+
+.rd-feed-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+/* ========================
+   Responsive
+   ======================== */
+@media (max-width: 768px) {
+  .rd-main { padding: 16px; }
+  .rd-cards-grid { grid-template-columns: 1fr; }
+  .rd-role-header { padding: 16px; gap: 12px; }
+  .rd-critical-badge { display: none; }
+}
+
+@media (max-width: 480px) {
+  .rd-role-title { font-size: 17px; }
+  .rd-role-subtitle { font-size: 12px; }
+}

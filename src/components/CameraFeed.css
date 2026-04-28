@@ -1,0 +1,113 @@
+.feed-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #0f172a;
+}
+
+.feed-video,
+.feed-iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  display: block;
+}
+
+.iframe-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  background: transparent;
+  /* Blocks clicks on iframe to prevent YouTube interaction when not expanded */
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.feed-skeleton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #1e293b 0%, #334155 50%, #1e293b 100%);
+  background-size: 200% 100%;
+  z-index: 2;
+}
+
+.pulse {
+  animation: shimmer 2s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.feed-fallback {
+  width: 100%;
+  height: 100%;
+  background: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.noise-overlay-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: repeating-radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.05) 0,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px,
+    transparent 100%
+  );
+  background-size: 6px 6px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.fallback-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #64748b;
+  z-index: 2;
+}
+
+.fallback-icon {
+  margin-bottom: 4px;
+  color: #475569;
+}
+
+.fallback-content span {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.no-signal {
+  color: #ef4444 !important;
+  font-weight: 800 !important;
+  font-size: 16px !important;
+  letter-spacing: 2px;
+  margin-top: 8px;
+  text-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
+  animation: blink 1.5s infinite alternate;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  100% { opacity: 0.4; }
+}

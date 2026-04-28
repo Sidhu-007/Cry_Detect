@@ -1,0 +1,116 @@
+.dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f3f4f6; /* Light UI with subtle gray surfaces */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+}
+
+.dashboard-main {
+  display: flex;
+  flex: 1;
+  padding: 24px;
+  gap: 24px;
+  overflow: hidden;
+}
+
+.dashboard-left {
+  flex: 5; /* slightly larger or equal depending on design, visual target shows alert panel taking roughly 55-60% */
+  height: 100%;
+}
+
+.dashboard-right {
+  flex: 4;
+  height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-main {
+    flex-direction: column;
+    overflow-y: auto;
+    height: auto;
+  }
+  
+  .dashboard-left, .dashboard-right {
+    height: auto;
+    min-height: 500px;
+  }
+}
+
+/* Responder Dashboard Specifics */
+.responder-main {
+  flex-direction: column;
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.responder-title {
+  margin-bottom: 24px;
+}
+
+.responder-card {
+  margin-bottom: 16px;
+  padding: 20px;
+}
+
+.responder-info {
+  margin-bottom: 16px;
+}
+
+.responder-actions {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.responder-back-btn {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4b5563;
+  padding: 8px 0;
+  font-size: 16px;
+}
+
+.responder-active-card {
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.responder-dispatch-text {
+  margin-top: 8px;
+  color: #6b7280;
+}
+
+.camera-feed-wrapper {
+  background: #111827;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16/9;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .responder-main {
+    padding: 16px;
+  }
+  .responder-active-card, .responder-card {
+    padding: 16px;
+  }
+  .camera-feed-wrapper {
+    border-radius: 8px;
+  }
+}

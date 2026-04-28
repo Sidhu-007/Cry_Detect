@@ -1,0 +1,241 @@
+/* Global Dark Mode Overrides - EXTREME BLACK (AMOLED) */
+
+body.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* TopBar */
+body.dark-mode .dashboard-topbar {
+  background: #000000;
+  border-bottom: 1px solid #222222;
+}
+
+body.dark-mode .topbar-titles h1 {
+  color: #ffffff;
+}
+
+body.dark-mode .topbar-titles span,
+body.dark-mode .org-name {
+  color: #9ca3af;
+}
+
+body.dark-mode .icon-btn {
+  background: #111111;
+  color: #ffffff;
+  border: 1px solid #333333;
+}
+
+body.dark-mode .icon-btn:hover {
+  background: #222222;
+}
+
+body.dark-mode .system-status-container {
+  background: #000000;
+  border: 1px solid #222222;
+}
+
+body.dark-mode .datetime-display .date,
+body.dark-mode .datetime-display .time {
+  color: #ffffff;
+}
+
+body.dark-mode .btn-exit {
+  background: #111111;
+  color: #ffffff;
+  border: 1px solid #333333;
+}
+
+body.dark-mode .btn-exit:hover {
+  background: #222222;
+}
+
+/* Common Panels */
+body.dark-mode .alert-panel,
+body.dark-mode .monitoring-panel,
+body.dark-mode .usermanagement-main {
+  background: #000000;
+  border: 1px solid #222222;
+}
+
+body.dark-mode .header-title h2,
+body.dark-mode .panel-tabs .tab-btn,
+body.dark-mode .usermanagement-header h2 {
+  color: #ffffff;
+}
+
+body.dark-mode .panel-tabs .tab-btn:hover:not(.active) {
+  background: #111111;
+}
+
+body.dark-mode .panel-tabs .tab-btn.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+/* Cards (Alerts & Cameras) */
+body.dark-mode .alert-card,
+body.dark-mode .camera-card {
+  background: #000000;
+  border: 1px solid #222222;
+}
+
+body.dark-mode .alert-card:hover,
+body.dark-mode .camera-card:hover {
+  border-color: #444444;
+}
+
+body.dark-mode .alert-title,
+body.dark-mode .camera-details h4 {
+  color: #ffffff;
+}
+
+body.dark-mode .alert-location,
+body.dark-mode .alert-time,
+body.dark-mode .camera-details span {
+  color: #9ca3af;
+}
+
+/* Empty states */
+body.dark-mode .empty-state,
+body.dark-mode .loading-state,
+body.dark-mode .timeline-empty {
+  color: #9ca3af;
+}
+
+body.dark-mode .empty-state h3 {
+  color: #ffffff;
+}
+
+/* Buttons */
+body.dark-mode .btn-action {
+  background: #000000;
+  color: #e5e7eb;
+  border: 1px solid #333333;
+}
+
+body.dark-mode .btn-action:hover:not(:disabled) {
+  background: #111111;
+  border-color: #555555;
+}
+
+body.dark-mode .btn-view {
+  background: #111111;
+  color: #ffffff;
+  border: 1px solid #333333;
+}
+
+body.dark-mode .btn-view:hover {
+  background: #222222;
+}
+
+body.dark-mode .btn-escalate {
+  background: #3f0000;
+  color: #ffcccc;
+  border: 1px solid #7f0000;
+}
+
+body.dark-mode .btn-escalate:hover {
+  background: #5f0000;
+}
+
+/* User Management Table */
+body.dark-mode .users-table th {
+  background: #000000;
+  color: #9ca3af;
+  border-bottom: 1px solid #222222;
+}
+
+body.dark-mode .users-table td {
+  color: #ffffff;
+  border-bottom: 1px solid #222222;
+}
+
+body.dark-mode .users-table tbody tr:hover {
+  background: #0a0a0a;
+}
+
+/* Modals */
+body.dark-mode .modal-content {
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid #333333;
+  box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .modal-content h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .form-group label {
+  color: #d1d5db;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group select {
+  background: #000000;
+  border: 1px solid #333333;
+  color: #ffffff;
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group select:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
+body.dark-mode .btn-cancel {
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid #333333;
+}
+
+body.dark-mode .btn-cancel:hover {
+  background: #111111;
+}
+
+/* Timeline */
+body.dark-mode .timeline-container {
+  background: #000000;
+  border: 1px solid #222222;
+  box-shadow: none;
+}
+
+body.dark-mode .timeline-title {
+  color: #ffffff;
+}
+
+body.dark-mode .history-item {
+  background: #000000;
+  border: 1px solid #222222;
+  border-left: 4px solid #444444;
+}
+
+body.dark-mode .history-header h4 {
+  color: #ffffff;
+}
+
+body.dark-mode .history-time {
+  color: #9ca3af;
+}
+
+/* Dashboard specific text */
+body.dark-mode .dashboard-main > h2 {
+  color: #ffffff;
+}
+
+body.dark-mode .dashboard-main > p {
+  color: #9ca3af;
+}
+
+/* Camera Feed Backgrounds */
+body.dark-mode .camera-feed-placeholder,
+body.dark-mode .feed-container,
+body.dark-mode .feed-fallback {
+  background: #000000;
+}
+
+body.dark-mode .feed-skeleton {
+  background: linear-gradient(90deg, #000000 0%, #111111 50%, #000000 100%);
+}
